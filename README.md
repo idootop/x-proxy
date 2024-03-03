@@ -6,9 +6,9 @@ Easily create a dynamic reverse proxy for any endpoint with just a simple URL pr
 
 ## ⚡️ Quick Setup
 
-Launch the X-Proxy service on port 3000 using Docker:
-
 [![Docker Image Version](https://img.shields.io/docker/v/idootop/x-proxy?color=%23086DCD&label=docker%20image)](https://hub.docker.com/r/idootop/x-proxy)
+
+Launch the X-Proxy service on port 3000 using Docker:
 
 ```shell
 docker run -d -p 3000:80 idootop/x-proxy:1.0.0
@@ -16,7 +16,15 @@ docker run -d -p 3000:80 idootop/x-proxy:1.0.0
 
 To start proxying, modify your desired endpoint's address to:
 
+```shell
 http://localhost:3000/?x-proxy-to=`target-endpoint`
+```
+
+Example:
+
+```shell
+http://localhost:3000/?x-proxy-to=https://www.google.com
+```
 
 That's all you need. Now you can proxy with ease!
 
